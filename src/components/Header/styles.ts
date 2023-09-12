@@ -1,34 +1,35 @@
 import styled from "styled-components";
-import { cores } from "../../styles";
+import { colors } from "../../styles";
 
-export const Imagem = styled.div`
-  width: 100%;
-  height: 384px;
-  display: block;
-  background-repeat: no-repeat;
+import bg from "../../assets/Imagens/Vector.png";
+
+export const HeaderContainer = styled.header`
+  background-image: url(${bg});
   background-size: cover;
-  font-weight: bold;
-`;
-
-export const LogoImg = styled.img`
-  width: 125px;
-  height: 57.5px;
-  margin-top: 50px;
-  margin-bottom: 150px;
-`;
-
-export const Paragrafo = styled.p`
-  color: ${cores.vermelhoClaro};
-  font-family: Roboto;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 42px;
-  letter-spacing: 0em;
-  text-align: center;
-`;
-
-export const Container = styled.div`
+  background-repeat: no-repeat;
+  height: 384px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const Title = styled.h2`
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+  color: ${colors.rose};
+  max-width: 539px;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: 615px) {
+    font-size: 24px;
+  }
+`;
+
+export const Logo = styled.img`
+  width: 125px;
+  height: 57px;
+  margin-bottom: 138px;
 `;

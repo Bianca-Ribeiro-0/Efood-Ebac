@@ -1,25 +1,41 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const cores = {
-  vermelhoClaro: "#E66767",
-  branco: "#ffff",
-  bege: "#ff12", //pegar a cor correta, não consegui
+export const colors = {
+  beige: "#FFEBD9",
+  rose: "#E66767",
+  white: "#FFFFFF",
+  white2: "#FFF8F2",
 };
 
-export const GlobalCss = createGlobalStyle`
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif
-}
-body {
-  background-color: ${cores.bege};
-}
+const GlobalStyle = createGlobalStyle`
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: ${colors.rose};
+        font-family: 'Roboto', sans-serif;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    body{
+        background-color: ${colors.white2};
+    }
+
+    .container{
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .margin-top{
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+    .margin-bottom{
+        margin-bottom: 24px;
+    }
 `;
 
-export const Container = styled.div`
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-`;
+export default GlobalStyle;
