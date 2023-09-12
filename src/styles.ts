@@ -1,13 +1,15 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle  } from 'styled-components'
 
 export const colors = {
-  beige: "#FFEBD9",
-  rose: "#E66767",
-  white: "#FFFFFF",
-  white2: "#FFF8F2",
-};
+    beige: '#FFEBD9',
+    rose: '#E66767',
+    white: '#FFFFFF',
+    white2: '#FFF8F2'
+}
 
 const GlobalStyle = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
 
     *{
         margin: 0;
@@ -36,6 +38,8 @@ const GlobalStyle = createGlobalStyle`
     .margin-bottom{
         margin-bottom: 24px;
     }
-`;
+`
 
-export default GlobalStyle;
+
+
+export default GlobalStyle

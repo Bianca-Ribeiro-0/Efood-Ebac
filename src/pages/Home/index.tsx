@@ -1,21 +1,25 @@
+import { useState, useEffect } from "react";
+import { DadosRestaurante } from "../../Components/CardRestaurants";
 import Header from "../../Components/Header";
 import RestList from "../../Containers/RestaurantList";
 
 import { useGetRestaurantsQuery } from "../../services/api";
 
 const Home = () => {
-  const { data: restaurante } = useGetRestaurantsQuery();
 
-  if (restaurante) {
-    return (
-      <>
-        <Header></Header>
-        <RestList restaurants={restaurante}></RestList>
-      </>
-    );
+  const {data: restaurante, isLoading} = useGetRestaurantsQuery()
+
+  if(restaurante){
+    return(
+        <>
+            <Header></Header>
+            <RestList restaurants={restaurante}></RestList>
+        </>
+    )    
   }
 
-  return <h3>Carregando</h3>;
-};
+  return <h3>CARREGANDO...</h3>
 
-export default Home;
+}
+
+export default Home

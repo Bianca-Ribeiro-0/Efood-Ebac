@@ -1,29 +1,29 @@
 import { useParams } from "react-router";
-import Banner from "../../Components/RestBanner";
-import ProductList from "../../Containers/ProductsList";
 import ProfileHeader from "../../Components/ProfileHeader";
+import Banner from "../../Components/RestBanner";
+import ProductList from "../../Containers/ProductList";
+
 
 import { useGetCurrentRestQuery } from "../../services/api";
 
 const Restaurant = () => {
-  const { id } = useParams();
-  const { data: currentRest } = useGetCurrentRestQuery(id!);
 
-  if (currentRest) {
-    return (
-      <>
-        <ProfileHeader></ProfileHeader>
-        <Banner
-          capa={currentRest.capa}
-          tipo={currentRest.tipo}
-          titulo={currentRest.titulo}
-        ></Banner>
-        <ProductList />
-      </>
-    );
-  }
+    const { id } = useParams()
+    const {data: currentRest} = useGetCurrentRestQuery(id!)
 
-  return <h3>Carregando</h3>;
-};
+    if (currentRest) {
+        
+            return(
+                <>
+                    <ProfileHeader></ProfileHeader>
+                    <Banner capa={currentRest.capa} tipo={currentRest.tipo} titulo={currentRest.titulo}></Banner>
+                    <ProductList/>
+                </>
+        
+            )        
+    }
 
-export default Restaurant;
+    return <h3>Carregando...</h3>
+}
+
+export default Restaurant
