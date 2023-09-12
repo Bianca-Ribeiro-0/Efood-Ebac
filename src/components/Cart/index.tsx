@@ -28,7 +28,8 @@ export const formataPreco = (preco = 0) => {
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart);
-  const [purchase, { data, isSuccess }] = usePurchaseMutation();
+  const [purchase, { data, isLoading, isError, isSuccess }] =
+    usePurchaseMutation();
   const [cart, setCart] = useState(true);
   const [purchaseData, setPurchaseData] = useState(false);
   const [paymentData, setPaymentData] = useState(false);
@@ -127,7 +128,7 @@ const Cart = () => {
             },
           },
         },
-      });
+      }).then((data) => console.log(data));
     },
   });
   console.log(form);

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { DadosRestaurante } from "../Components/CardRestaurants";
 
@@ -42,7 +43,7 @@ const api = createApi({
     getCurrentRest: builder.query<DadosRestaurante, string>({
       query: (id) => `restaurantes/${id}`,
     }),
-    purchase: builder.mutation<unknown, PurchasePayload>({
+    purchase: builder.mutation<any, PurchasePayload>({
       query: (body) => ({
         url: "checkout",
         method: "POST",
