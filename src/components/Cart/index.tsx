@@ -7,7 +7,7 @@ import {
     Prices,
     Sidebar,
     Title
-} from './styles'
+} from "./styles"
   
 import { RootReducer } from '../../store'
 import { useDispatch, useSelector } from 'react-redux'
