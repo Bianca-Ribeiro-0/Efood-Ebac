@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GlobalStyle from './styles';
 
 import Rotas from './routes'
-import Cart from './Components/Cart';
 import Footer from './Components/Footer';
+import Cart from './Components/Cart';
 import { store } from './store';
 
 
