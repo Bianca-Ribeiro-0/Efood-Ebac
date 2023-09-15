@@ -4,7 +4,7 @@ import GlobalStyle from './styles';
 import Footer from './components/Footer';
 
 import Rotas from './routes'
-import Cart from './Components/Cart';
+import Cart from './components/Cart';
 import { store } from './store';
 
 //

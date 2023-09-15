@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-import { DadosRestaurante, MenuItem, getDescription } from "../../Components/CardRestaurants";
-import Product from "../../Components/Product";
+import { DadosRestaurante, MenuItem, getDescription } from "../../components/CardRestaurants";
+import Product from "../../components/Product";
 import { Close, List, Modal, ModalContainer, ModalContent } from "./styles";
 
 import closeIcon from '../../Assets/images/close 1.png'
 import { useDispatch } from "react-redux";
 import {add, open, close} from '../../store/reducers/cart'
-import { formataPreco } from "../../Components/Cart";
+import { formataPreco } from "../../components/Cart";
 
 type ModalState = {
     isVisible: boolean
