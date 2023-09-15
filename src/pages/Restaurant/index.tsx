@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
-import ProfileHeader from "../../Components/ProfileHeader";
-import Banner from "../../Components/RestBanner";
+import ProfileHeader from "../../components/ProfileHeader";
+import Banner from "../../components/RestBanner";
 import ProductList from "../../Containers/ProductList";
 
 

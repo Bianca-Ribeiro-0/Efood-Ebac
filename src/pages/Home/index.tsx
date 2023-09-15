@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { DadosRestaurante } from "../../Components/CardRestaurants";
-import Header from "../../Components/Header";
+import { DadosRestaurante } from "../../components/CardRestaurants";
+import Header from "../../components/Header";
 import RestList from "../../Containers/RestaurantList";
 
 import { useGetRestaurantsQuery } from "../../services/api";

@@ -1,4 +1,4 @@
-import Restaurant, { DadosRestaurante } from "../../Components/CardRestaurants";
+import Restaurant, { DadosRestaurante } from "../../components/CardRestaurants";
 import { List, ListContainer } from "./styles";
 
 type Props = {

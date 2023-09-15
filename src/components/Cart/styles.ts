@@ -1,7 +1,4 @@
-
-
 import styled from 'styled-components'
-
 
 import close from '../../Assets/images/lixeira.png'
 import { colors } from '../../styles'
