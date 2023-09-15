@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GlobalStyle from './styles';
-import Footer from './Components/Footer';
+import Footer from './components/Footer';
 
 import Rotas from './routes'
 import Cart from './Components/Cart';
